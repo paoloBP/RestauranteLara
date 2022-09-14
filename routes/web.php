@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProdutoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('categoria', function () {
-    return "Ola!".
-        "<br> Esra é rota pra listar categorias";
-});
+
+//Route::resource('categorias', CategoriaController::class);
+Route::resource('produtos', ProdutoController::class);
+//Route::get('produto/{slug}', [UserController::class, 'details'])->name('site.datails');

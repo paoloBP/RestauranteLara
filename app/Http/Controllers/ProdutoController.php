@@ -14,7 +14,11 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        //
+      //  return 'index';
+
+        $produtos = Produto::all();
+
+        return view('site.home', compact('produtos'));
     }
 
     /**
@@ -46,7 +50,6 @@ class ProdutoController extends Controller
      */
     public function show(Produto $produto)
     {
-        //
     }
 
     /**
