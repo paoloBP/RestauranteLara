@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('categoria', function () {
+    return "Ola!".
+        "<br> Esra é rota pra listar categorias";
+});
