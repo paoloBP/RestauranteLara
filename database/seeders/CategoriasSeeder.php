@@ -27,5 +27,9 @@ class CategoriasSeeder extends Seeder
         Categoria::create([
             'nome' => 'Bebidas',
         ]);
+
+        Categoria::create([
+            'nome' => 'Porção',
+        ]);
     }
 }

@@ -16,7 +16,6 @@ class Produto extends Model
         'descricao',
         'preco',
         'estoque',
-        'slug',
         'imagem',
         'id_user',
         'id_categoria',

@@ -19,8 +19,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Pão, hambúrguer, ovo, queijo, milho, ervilha, tomate, alface, maionese e catchup.',
             'preco' => '20',
             'estoque' => '5',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://guerreirolanches.com.br/wp-content/uploads/2017/08/xis_banner_1.jpg',
             'id_user' => '1',
             'id_categoria' => '2',
         ]);
@@ -30,8 +29,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Pão, hambúrguer, ovo, queijo, milho, ervilha, tomate, bacon, maionese e catchup.',
             'preco' => '23',
             'estoque' => '4',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://xgauchocasanova.com.br/wp-content/uploads/2021/12/X-Bacon.jpg',
             'id_user' => '1',
             'id_categoria' => '2',
         ]);
@@ -41,8 +39,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Arroz, feijão, ovo, batata frita e salada.',
             'preco' => '30',
             'estoque' => '4',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://tendadoumbu.com.br/wp-content/uploads/2017/08/Card-A-la-minuta-1080x675.png',
             'id_user' => '1',
             'id_categoria' => '3',
         ]);
@@ -52,8 +49,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Arroz, feijão, ovo, batata frita e salada.',
             'preco' => '30',
             'estoque' => '4',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://www.noronhalanches.com.br/images/cardapio/alaminuta/frango.jpg',
             'id_user' => '1',
             'id_categoria' => '3',
         ]);
@@ -63,8 +59,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Pão Sovado com Gergelim Preto, Hambúrguer de Costela 180G, Queijo Mussarela, Molho de Mostarda e Mel, Cebola Crispy,, Rúcula, Maionese Taverna, Acompanha Anéis de Cebola.',
             'preco' => '33',
             'estoque' => '5',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://app.numerama.com.br/uploaded/26341638000180_files/produtos/619647/LGHVDTDGXPWDAFA64QLM95F3NVC8C1HX3ZCMALS25OBZ7W6LDRCJOCWTMKPRS8YUQ9KIZV.jpeg',
             'id_user' => '1',
             'id_categoria' => '1',
         ]);
@@ -74,8 +69,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => 'Pão Cervejinha, Hambúrguer de Cordeiro 180G, Queijo Mussarela, Molho de Iogurte com Hortelã, Rúcula, Maionese Taverna, Acompanha Fritas.',
             'preco' => '34',
             'estoque' => '5',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://app.numerama.com.br/uploaded/26341638000180_files/produtos/619588/FYWKMKKTMMDN7OW91DSOCGYTZGH3OPVRCW14VLD2MI59JVGM7CNY9NKWUPTYAQSPAQ5J2D.jpeg',
             'id_user' => '1',
             'id_categoria' => '1',
         ]);
@@ -85,8 +79,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => '350 ml',
             'preco' => '5',
             'estoque' => '5',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://www.carone.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/7/27329_B_1.jpg',
             'id_user' => '1',
             'id_categoria' => '4',
         ]);
@@ -96,10 +89,39 @@ class ProdutosSeeder extends Seeder
             'descricao' => '350 ml',
             'preco' => '5',
             'estoque' => '5',
-            'slug' => '',
-            'imagem' => '',
+            'imagem' => 'https://www.imigrantesbebidas.com.br/bebida/images/products/full/1986-refrigerante-coca-cola-sem-acucar-lata-350ml.jpg',
             'id_user' => '1',
             'id_categoria' => '4',
+        ]);
+
+        Produto::create([
+            'nome' => 'Anéis de Cebola',
+            'descricao' => 'Cebola empanada frita',
+            'preco' => '22',
+            'estoque' => '5',
+            'imagem' => 'https://app.numerama.com.br/uploaded/26341638000180_files/produtos/619591/WW5LF8PXOWBMBM4ELKQPDZV1DFP0QPR9JGWXFGCOUF749SNWDEEJUSCSV7UMAJD6XUVHDU.jpeg',
+            'id_user' => '1',
+            'id_categoria' => '5',
+        ]);
+
+        Produto::create([
+            'nome' => 'Batata Frita Rústica',
+            'descricao' => 'Batata rústica frita',
+            'preco' => '23',
+            'estoque' => '5',
+            'imagem' => 'https://app.numerama.com.br/uploaded/26341638000180_files/produtos/619582/A438OVEN5CGQIDL4ZOQ1R5SYHJ0UUFZXBZRPDTBGFZMUXZJCOOYVEG48UZGSBGPJX47IIW.jpeg',
+            'id_user' => '1',
+            'id_categoria' => '5',
+        ]);
+
+        Produto::create([
+            'nome' => 'Batata Frita',
+            'descricao' => 'Batata frita',
+            'preco' => '18',
+            'estoque' => '5',
+            'imagem' => 'https://thumb-cdn.soluall.net/prod/shp_products/sp1280fw/5db0a140-3ae8-40b3-925f-6b22ac1e07be/5db0a140-7608-47b6-82fa-6b22ac1e07be.jpg',
+            'id_user' => '1',
+            'id_categoria' => '5',
         ]);
     }
 }
