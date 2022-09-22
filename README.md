@@ -3,7 +3,7 @@
 
 -  O presente projeto visa permitir o controle de funcionamento de um restaurante, gerenciar produto, sendo separado por categorias e ai sim os produtos. Através de uma interface moderna e intuitiva será possível gerar cadastros e relatórios.
 
-- [Paolo Bonez Piovezan(161692@upf.br)].
+- Paolo Bonez Piovezan(161692@upf.br)
 
 ## Tarefas Futuras:
 - [x] Início do Repositório
