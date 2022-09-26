@@ -79,7 +79,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => '350 ml',
             'preco' => '5',
             'estoque' => '5',
-            'imagem' => 'https://www.carone.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/7/27329_B_1.jpg',
+            'imagem' => 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/e9e029dc-e4cc-4a37-af8c-884c3950b41b/202205131049_2KW1_i.jpg',
             'id_user' => '1',
             'id_categoria' => '4',
         ]);
@@ -89,7 +89,7 @@ class ProdutosSeeder extends Seeder
             'descricao' => '350 ml',
             'preco' => '5',
             'estoque' => '5',
-            'imagem' => 'https://www.imigrantesbebidas.com.br/bebida/images/products/full/1986-refrigerante-coca-cola-sem-acucar-lata-350ml.jpg',
+            'imagem' => 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/e9e029dc-e4cc-4a37-af8c-884c3950b41b/202205131049_M78A_i.jpg',
             'id_user' => '1',
             'id_categoria' => '4',
         ]);
