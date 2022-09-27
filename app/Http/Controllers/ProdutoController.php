@@ -18,6 +18,7 @@ class ProdutoController extends Controller
 
         $produtos = Produto::paginate(15);
 
+        //return view('produtos.index', compact('produtos'));
         return view('site.home', compact('produtos'));
     }
 
@@ -28,7 +29,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('produtos.create');
     }
 
     /**

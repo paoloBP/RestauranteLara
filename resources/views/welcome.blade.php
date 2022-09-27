@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@include('includes.mensagem',['titulo'=>'Mensagem de sucesso!'])
-
-@component('components.sidebar')
-    @slot('paragrafo')
-        Texto qualquer vindo do slot
-    @endslot
-@endcomponent
-
 
 <head>
     <meta charset="utf-8">
