@@ -16,10 +16,8 @@ class ProdutoController extends Controller
     {
       //  return 'index';
 
-        $produtos = Produto::paginate(15);
-
-        //return view('produtos.index', compact('produtos'));
-        return view('site.home', compact('produtos'));
+        $produtos = Produto::all();
+        return view('produtos.index', ['produtos'=>$produtos]);
     }
 
     /**
@@ -40,7 +38,10 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $novo_produto = $request->all();
+        Produto::create($novo_produto);
+
+        return redirect('produto');
     }
 
     /**

@@ -1,45 +1,20 @@
-@extends('layouts.default')
+@extends('adminlte::page')
 
 @section('content')
-    <h1>Categoraias</h1>
-
-    {!! Form::open(['name'=>'form_name', 'route'=>'categorias']) !!}
-    <div calss="sidebar-form">
-        <div class="input-group">
-            <input type="text" name="desc_filtro" class="form-control" style="width:80% !important;" placeholder="Pesquisa...">
-            <span class="input-group-btn">
-                	<button type="submit" name="search" id="search-btn" class="btn btn-default"><i class="fa fa-search"></i></button>
-              	</span>
-        </div>
-    </div>
-    {!! Form::close() !!}
-    <br>
-
+    <h1 align=center>Listagem de Categorias</h1>
     <table class="table table-stripe table-bordered table-hover">
-        <thead>
-        <th>Nome</th>
-        <th>Ações</th>
-        </thead>
-
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+            </thead>
         <tbody>
         @foreach($categorias as $categoria)
             <tr>
+                <td>{{ $categoria->id}}</td>
                 <td>{{ $categoria->nome }}</td>
-
-                <td>
-                    <a href="{{ route('categorias.edit', ['id'=>\Crypt::encrypt($categoria->id)]) }}" class="btn-sm btn-success">Editar</a>
-                    <a href="#" onclick="return ConfirmaExclusao({{$categoria->id}})"  class="btn-sm btn-danger">Remover</a>
-                </td>
             </tr>
         @endforeach
         </tbody>
     </table>
 
-    {{ $categorias->links() }}
-
-    <a href="{{ route('categorias.create', []) }}" class="btn btn-info">Adicionar</a>
 @stop
-
-@section('table-delete')
-    "categorias"
-@endsection
