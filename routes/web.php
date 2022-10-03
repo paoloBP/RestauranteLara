@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('categorias', [\App\Http\Controllers\CategoriaController::class, 'index']);
+
 Route::get('categorias/create', [\App\Http\Controllers\CategoriaController::class,  ['except' => 'create']]);
 Route::post('categorias/store', [\App\Http\Controllers\CategoriaController::class, 'store']);
 
@@ -25,3 +25,4 @@ Route::post('produtos/store', [\App\Http\Controllers\ProdutoController::class, '
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('categorias', [\App\Http\Controllers\CategoriaController::class, 'index']);
