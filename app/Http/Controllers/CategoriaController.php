@@ -18,7 +18,6 @@ class CategoriaController extends Controller
 
         $categorias = Categoria::all();
 
-        //return view('site.homemm', compact('categorias'));
         return view('categorias.index', ['categorias'=>$categorias]);
 
     }
@@ -30,7 +29,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('categorias.create');
+        return view('categoriascreate');
     }
 
     /**
@@ -39,13 +38,6 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoriaRequest $request)
-    {
-        $novo_categoria = $request->all();
-        Categoria::create($novo_categoria);
-
-        return redirect()->route('atores');
-    }
 
     /**
      * Display the specified resource.
@@ -90,5 +82,12 @@ class CategoriaController extends Controller
     public function destroy(Categoria $categoria)
     {
         //
+    }
+
+    public function store(CategoriaRequest $request) {
+        $nova_categoria = $request->all();
+        Categoria::create($nova_categoria);
+
+        return redirect('categorias');
     }
 }
