@@ -90,4 +90,9 @@ class CategoriaController extends Controller
 
         return redirect('categorias');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
