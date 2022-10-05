@@ -9,6 +9,5 @@
 - [x] Início do Repositório
 - [x] Ajustes no banco de dados produto, user, categoria.
 - [x] Ajustes na listagem de produtos e categoria.
-- [ ] Ajustes no banco de dados (Pensar no carrinho de compras do ingresso)
 - [ ] Listagem de dados (Tela simples)
 - [ ] Ajustes no front
