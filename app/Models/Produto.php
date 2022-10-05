@@ -11,7 +11,7 @@ class Produto extends Model
 
 {
     use HasApiTokens, HasFactory, Notifiable;
-    protected $hidden = [
+    protected $fillable = [
         'nome',
         'descricao',
         'preco',
@@ -19,5 +19,6 @@ class Produto extends Model
         'imagem',
         'id_user',
         'id_categoria',
+
         ];
 }

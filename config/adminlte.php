@@ -294,7 +294,7 @@ return [
         [
             'text' => 'Categoria',
             'url'  => 'categorias',
-            'icon' => 'fas fa-fw fa-file-invoice',
+            'icon' => 'fas fa-fw fa-list-alt',
         ],
 
 
@@ -313,6 +313,18 @@ return [
         [
             'text' => 'Criar Produto',
             'url'  => 'produtos/create',
+            'icon' => 'fas fa-fw fa-plus',
+        ],
+
+        [
+            'text' => 'Clientes',
+            'url'  => 'users',
+            'icon' => 'fas fa-fw  fas fa-user',
+        ],
+
+        [
+            'text' => 'Criar Cliente',
+            'url'  => 'users/create',
             'icon' => 'fas fa-fw fa-plus',
         ],
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produto;
-use App\Http\Requests\ProdutoRequest;
+use App\Http\Requests\UserRequest;
+use App\Models\User;
 
-class ProdutoController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,12 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-      //  return 'index';
 
-        $produtos = Produto::all();
-        return view('produtos.index', ['produtos'=>$produtos]);
+
+        $users = User::all();
+
+        return view('users.index', ['users'=>$users]);
+
     }
 
     /**
@@ -27,7 +29,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('produtos.create');
+        return view('users.create');
     }
 
     /**
@@ -36,31 +38,25 @@ class ProdutoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProdutoRequest $request)
-    {
-        $novo_produto = $request->all();
-        Produto::create($novo_produto);
-
-        return redirect('produtos');
-    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show(Produto $produto)
+    public function show(User $user)
     {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produto $produto)
+    public function edit(User $user)
     {
         //
     }
@@ -69,10 +65,10 @@ class ProdutoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produto $produto)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -80,12 +76,19 @@ class ProdutoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produto $produto)
+    public function destroy(User $user)
     {
         //
+    }
+
+    public function store(UserRequest $request) {
+        $novo_user = $request->all();
+        User::create($novo_user);
+
+        return redirect('users');
     }
 
     public function __construct()

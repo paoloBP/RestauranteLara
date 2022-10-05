@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produto;
-use App\Http\Requests\ProdutoRequest;
+use App\Models\Categoria;
+use App\Http\Requests\CategoriaRequest;
 
-class ProdutoController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,12 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-      //  return 'index';
 
-        $produtos = Produto::all();
-        return view('produtos.index', ['produtos'=>$produtos]);
+
+        $categorias = Categoria::all();
+
+        return view('categorias.index', ['categorias'=>$categorias]);
+
     }
 
     /**
@@ -27,7 +29,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('produtos.create');
+        return view('categorias.create');
     }
 
     /**
@@ -36,31 +38,25 @@ class ProdutoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProdutoRequest $request)
-    {
-        $novo_produto = $request->all();
-        Produto::create($novo_produto);
-
-        return redirect('produtos');
-    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show(Produto $produto)
+    public function show(Categoria $categoria)
     {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produto $produto)
+    public function edit(Categoria $categoria)
     {
         //
     }
@@ -69,10 +65,10 @@ class ProdutoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produto $produto)
+    public function update(Request $request, Categoria $categoria)
     {
         //
     }
@@ -80,12 +76,19 @@ class ProdutoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Produto  $produto
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produto $produto)
+    public function destroy(Categoria $categoria)
     {
         //
+    }
+
+    public function store(CategoriaRequest $request) {
+        $nova_categoria = $request->all();
+        Categoria::create($nova_categoria);
+
+        return redirect('categorias');
     }
 
     public function __construct()
