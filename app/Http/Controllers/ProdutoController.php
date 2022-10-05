@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Produto;
 use App\Http\Requests\ProdutoRequest;
 
@@ -17,7 +18,12 @@ class ProdutoController extends Controller
       //  return 'index';
 
         $produtos = Produto::all();
-        return view('produtos.index', ['produtos'=>$produtos]);
+       return view('produtos.index', ['produtos'=>$produtos]);
+
+
+
+
+
     }
 
     /**
@@ -92,4 +98,5 @@ class ProdutoController extends Controller
     {
         $this->middleware('auth');
     }
+
 }

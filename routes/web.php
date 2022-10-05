@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('categorias', [\App\Http\Controllers\CategoriaController::class, 'index']);
-Route::get('categorias/create', [\App\Http\Controllers\CategoriaController::class,  ['except' => 'create']]);
+Route::get('categorias/create', [\App\Http\Controllers\CategoriaController::class, 'create']);
 Route::post('categorias/store', [\App\Http\Controllers\CategoriaController::class, 'store']);
 
 Route::get('produtos', [\App\Http\Controllers\ProdutoController::class, 'index']);

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Nova Cliente</h3>
+    <h1 align=center style="font-weight: bold">Novo Usuário</h1>
 
     {!! Form::open(['url'=>'users/store']) !!}
 
@@ -21,9 +21,11 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Criar Cliente', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Criar', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
+        <a href="{{ url('users') }}"class="btn btn-info">Cancelar</a>
     </div>
 
     {!! Form::close() !!}
+
 @stop

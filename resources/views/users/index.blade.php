@@ -1,7 +1,11 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h1 align=center>Listagem de Clientes</h1>
+    <h1 align=center style="font-weight: bold">Listagem de Usuários</h1></br>
+
+    <div class="form-group">
+        <a href="{{ url('users/create') }}"  class="btn btn-info">Adicionar</a>
+    </div>
     <table class="table table-stripe table-bordered table-hover">
         <thead>
         <th>ID</th>
@@ -16,7 +20,8 @@
                 <td>{{ $user->email }}</td>
             </tr>
         @endforeach
+
+
         </tbody>
     </table>
-
 @stop

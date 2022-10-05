@@ -1,7 +1,8 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Novo Produto</h3>
+    <h1 align=center style="font-weight: bold">Novo Produto</h1>
+
 
     {!! Form::open(['url'=>'produtos/store']) !!}
 
@@ -42,11 +43,11 @@
 
 
     <div class="form-group">
-        {!! Form::submit('Criar Produtos', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Criar', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
+        <a href="{{ url('produtos') }}"class="btn btn-info">Cancelar</a>
     </div>
 
     {!! Form::close() !!}
-
 
 @stop

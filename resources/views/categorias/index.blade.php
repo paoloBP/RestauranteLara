@@ -1,7 +1,12 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h1 align=center>Listagem de Categorias</h1>
+    <h1 align=center style="font-weight: bold">Listagem de Categorias</h1></br>
+
+    <div class="form-group">
+        <a href="{{ url('categorias/create') }}" class="btn btn-info">Criar</a>
+    </div>
+
     <table class="table table-stripe table-bordered table-hover">
             <thead>
                 <th>ID</th>
@@ -18,3 +23,4 @@
     </table>
 
 @stop
+

@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'RestauranteLara',
+    'title' => 'CineLara',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Lara</b>',
+    'logo' => '<b>Restaurante  </b>Lara',
     'logo_img' => 'vendor/adminlte/dist/img/avatar.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Restaurante',
+    'logo_img_alt' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -290,19 +290,14 @@ return [
     */
 
     'menu' => [
-        ['header' => 'Cadastros'],
+        ['header'=> 'CADASTROS'] ,
         [
-            'text' => 'Categoria',
+            'text' => 'Categorias',
             'url'  => 'categorias',
             'icon' => 'fas fa-fw fa-list-alt',
+
         ],
 
-
-        [
-            'text' => 'Criar Categoria',
-            'url'  => 'categorias/create',
-            'icon' => 'fas fa-fw fa-plus',
-        ],
 
         [
             'text' => 'Produtos',
@@ -311,23 +306,10 @@ return [
         ],
 
         [
-            'text' => 'Criar Produto',
-            'url'  => 'produtos/create',
-            'icon' => 'fas fa-fw fa-plus',
-        ],
-
-        [
-            'text' => 'Clientes',
+            'text' => 'Usuários',
             'url'  => 'users',
             'icon' => 'fas fa-fw  fas fa-user',
         ],
-
-        [
-            'text' => 'Criar Cliente',
-            'url'  => 'users/create',
-            'icon' => 'fas fa-fw fa-plus',
-        ],
-
 
 
     ],

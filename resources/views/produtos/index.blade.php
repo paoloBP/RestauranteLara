@@ -1,7 +1,11 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h1 align=center>Listagem de Produtos</h1>
+    <h1 align=center style="font-weight: bold">Listagem de Produtos</h1></br>
+
+    <div class="form-group">
+        <a href="{{ url('produtos/create') }}" class="btn btn-info">Adicionar</a>
+    </div>
     <table class="table table-stripe table-bordered table-hover">
         <thead>
         <th>ID</th>
@@ -24,11 +28,11 @@
                 <td>{{ $produto->estoque }}</td>
                 <td><img src="{{$produto->imagem}}"width="61"></td>
                 <td>{{ $produto->id_user }}</td>
-                <td>{{ $produto->id_categoria }}</td>
-
+                <td>{{ $produto->id_categoria}}</td>
             </tr>
         @endforeach
         </tbody>
     </table>
+
 
 @stop
