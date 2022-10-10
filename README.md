@@ -14,6 +14,15 @@
 - npm run dev
 - php artisan key:generate
 
+## Comandos diversos
+- php artisan migrate 
+- php artisan migrate:fresh
+- php artisan migrate:reset
+- php artisan db:seed 
+- php artisan serve 
+- php artisan optimize
+
+
 ## Tarefas Futuras:
 - [x] Início do Repositório
 - [x] Ajustes no banco de dados produto, user, categoria.
