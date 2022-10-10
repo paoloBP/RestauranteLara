@@ -5,7 +5,7 @@
 
 - Paolo Bonez Piovezan(161692@upf.br)
 
-- Comandos pós clonar
+## Comandos pós clonar
 - composer install
 -composer require laravelcollective/html
 -php artisan route:clear
