@@ -7,12 +7,12 @@
 
 ## Comandos pós clonar
 - composer install
--composer require laravelcollective/html
--php artisan route:clear
--php artisan config:clear
--php artisan view:clear
--npm run dev
--php artisan key:generate
+- composer require laravelcollective/html
+- php artisan route:clear
+- php artisan config:clear
+- php artisan view:clear
+- npm run dev
+- php artisan key:generate
 
 ## Tarefas Futuras:
 - [x] Início do Repositório
