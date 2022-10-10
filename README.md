@@ -5,6 +5,15 @@
 
 - Paolo Bonez Piovezan(161692@upf.br)
 
+- Comandos pós clonar
+- composer install
+-composer require laravelcollective/html
+-php artisan route:clear
+-php artisan config:clear
+-php artisan view:clear
+-npm run dev
+-php artisan key:generate
+
 ## Tarefas Futuras:
 - [x] Início do Repositório
 - [x] Ajustes no banco de dados produto, user, categoria.
