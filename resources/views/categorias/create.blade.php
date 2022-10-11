@@ -6,7 +6,7 @@
         </br>
 
 
-        {!! Form::open(['url'=>'categorias/store']) !!}
+        {!! Form::open(['route'=>'categorias.store']) !!}
 
         <div class="form-group" >
             {!! Form::label('nome', 'Nome:' ) !!}

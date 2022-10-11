@@ -56,9 +56,11 @@ class CategoriaController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categoria $categoria)
+    public function edit($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categorias.edit' , compact('categoria'));
+
     }
 
     /**
@@ -68,9 +70,10 @@ class CategoriaController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categoria $categoria)
+    public function update(CategoriaRequest $request, $id)
     {
-        //
+        Categoria::find($id)->update($request->all());
+        return redirect()->route('categorias');
     }
 
     /**
@@ -79,16 +82,17 @@ class CategoriaController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($id)
     {
-        //
+        Categoria::find($id)->delete();
+        return redirect()->route('categorias');
     }
 
     public function store(CategoriaRequest $request) {
         $nova_categoria = $request->all();
         Categoria::create($nova_categoria);
 
-        return redirect('categorias');
+        return redirect()->route('categorias');
     }
 
     public function __construct()
