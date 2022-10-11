@@ -5,6 +5,14 @@
         <h1 align=center style="font-weight: bold">Nova Categoria</h1>
         </br>
 
+        @if($errors->any())
+            <ul class="alert alert-danger">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
 
         {!! Form::open(['route'=>'categorias.store']) !!}
 
