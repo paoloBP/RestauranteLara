@@ -5,8 +5,6 @@
 
     <div class="form-group">
         <a href="{{ route('categorias.create') }}" class="btn btn-info">Criar</a>
-
-
     </div>
 
     <table class="table table-stripe table-bordered table-hover">
@@ -33,4 +31,8 @@
     </table>
 
 @stop
+
+@section('table-delete')
+    "categorias"
+@endsection
 

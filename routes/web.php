@@ -18,18 +18,26 @@ Route::group(['prefix'=>'categorias', 'where'=>['id'=>'[0-9]+']], function() {
     Route::put('{id}/update', ['as'=>'categorias.update', 'uses'=>"\App\Http\Controllers\CategoriaController@update"]);
 });
 
-
-Route::group(['prefix'=>'produtos', 'where'=>['id'=>'[0-9+']], function(){
-    Route::get('', ['as'=> 'produtos', 'uses'=> '\App\Http\Controllers\ProdutoController::class@index']);
-    Route::get('create', ['as'=> 'produtos/Create', 'uses'=> '\App\Http\Controllers\ProdutoController::class@Create']);
-    Route::post('store', ['as'=> 'produtos/store', 'uses'=> '\App\Http\Controllers\ProdutoController::class@store']);
+Route::group(['prefix'=>'produtos', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('', ['as'=>'produtos', 'uses'=>"\App\Http\Controllers\ProdutoController@index"]);
+    Route::get('create', ['as'=>'produtos.create', 'uses'=>"\App\Http\Controllers\ProdutoController@create"]);
+    Route::post('store', ['as'=>'produtos.store', 'uses'=>"\App\Http\Controllers\ProdutoController@store"]);
+    Route::get('{id}/destroy', ['as'=>'produtos.destroy', 'uses'=>"\App\Http\Controllers\ProdutoController@destroy"]);
+    Route::get('{id}/edit', ['as'=>'produtos.edit', 'uses'=>"\App\Http\Controllers\ProdutoController@edit"]);
+    Route::put('{id}/update', ['as'=>'produtos.update', 'uses'=>"\App\Http\Controllers\ProdutoController@update"]);
 });
 
-Route::group(['prefix'=>'users', 'where'=>['id'=>'[0-9+']], function(){
-    Route::get('', ['as'=> 'users', 'uses'=> '\App\Http\Controllers\ProdutoController::class@index']);
-    Route::get('create', ['as'=> 'users/Create', 'uses'=> '\App\Http\Controllers\ProdutoController::class@Create']);
-    Route::post('store', ['as'=> 'users/store', 'uses'=> '\App\Http\Controllers\ProdutoController::class@store']);
+
+
+Route::group(['prefix'=>'users', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('', ['as'=>'users', 'uses'=>"\App\Http\Controllers\UserController@index"]);
+    Route::get('create', ['as'=>'users.create', 'uses'=>"\App\Http\Controllers\UserController@create"]);
+    Route::post('store', ['as'=>'users.store', 'uses'=>"\App\Http\Controllers\UserController@store"]);
+    Route::get('{id}/destroy', ['as'=>'users.destroy', 'uses'=>"\App\Http\Controllers\UserController@destroy"]);
+    Route::get('{id}/edit', ['as'=>'users.edit', 'uses'=>"\App\Http\Controllers\UserController@edit"]);
+    Route::put('{id}/update', ['as'=>'users.update', 'uses'=>"\App\Http\Controllers\UserController@update"]);
 });
+
 
 
 Auth::routes();

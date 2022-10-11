@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categoria;
 use App\Models\Produto;
 use App\Http\Requests\ProdutoRequest;
 
@@ -15,15 +14,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-      //  return 'index';
-
         $produtos = Produto::all();
-       return view('produtos.index', ['produtos'=>$produtos]);
-
-
-
-
-
+        return view('produtos.index', ['produtos'=>$produtos]);
     }
 
     /**
@@ -66,9 +58,10 @@ class ProdutoController extends Controller
      * @param  \App\Models\Produto  $produto
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produto $produto)
+    public function edit($id)
     {
-        //
+        $produto = Produto::find($id);
+        return view('produtos.edit' , compact('produto'));
     }
 
     /**
@@ -78,9 +71,10 @@ class ProdutoController extends Controller
      * @param  \App\Models\Produto  $produto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produto $produto)
+    public function update(ProdutoRequest $request, $id)
     {
-        //
+        Produto::find($id)->update($request->all());
+        return redirect()->route('produtos');
     }
 
     /**
@@ -89,9 +83,10 @@ class ProdutoController extends Controller
      * @param  \App\Models\Produto  $produto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produto $produto)
+    public function destroy($id)
     {
-        //
+        Produto::find($id)->delete();
+        return redirect()->route('produtos');
     }
 
     public function __construct()

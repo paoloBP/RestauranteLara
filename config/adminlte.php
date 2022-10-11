@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'CineLara',
+    'title' => 'Restaurante',
     'title_prefix' => '',
     'title_postfix' => '',
 

@@ -56,9 +56,10 @@ class UserController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('users.edit' , compact('user'));
     }
 
     /**
@@ -68,9 +69,10 @@ class UserController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, $id)
     {
-        //
+        User::find($id)->update($request->all());
+        return redirect()->route('users');
     }
 
     /**
@@ -79,16 +81,17 @@ class UserController extends Controller
      * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        User::find($id)->delete();
+        return redirect()->route('users');
     }
 
     public function store(UserRequest $request) {
         $novo_user = $request->all();
         User::create($novo_user);
 
-        return redirect('users');
+        return redirect()->route('users');
     }
 
     public function __construct()

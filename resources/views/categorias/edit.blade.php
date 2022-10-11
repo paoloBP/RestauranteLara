@@ -6,11 +6,11 @@
     </br>
 
 
-    {!! Form::open(['route'=>["categorias.update", 'id'=>$categoria->id], 'method'=>'put']) !!}
+    {!! Form::open(['route'=> ["categorias.update", 'id'=>$categoria->id], 'method'=>'put']) !!}
 
     <div class="form-group" >
         {!! Form::label('nome', 'Nome:' ) !!}
-        {!! Form::text('nome', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('nome', $categoria->nome, ['class'=>'form-control', 'required']) !!}
     </div>
 
     <div class="form-group" >
