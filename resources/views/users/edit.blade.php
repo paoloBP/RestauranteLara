@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h1 align=center style="font-weight: bold">Novo Usuário: {{$user->nome}}</h1>
+    <h1 align=center style="font-weight: bold">Editando Usuário: {{$user->nome}}</h1>
     </br>
 
     {!! Form::open(['route'=> ["users.update", 'id'=>$user->id], 'method'=>'put']) !!}

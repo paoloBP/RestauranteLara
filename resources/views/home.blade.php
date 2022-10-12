@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Seria um sistema para restaurante onde terá um crud e um carrinho de compra para
-                                realizar o pedido') }}
+                    {{ __('Seria um controle de estoque para restaurante.') }}
                 </div>
             </div>
         </div>

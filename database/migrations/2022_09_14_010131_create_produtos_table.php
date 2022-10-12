@@ -17,8 +17,7 @@ class CreateProdutosTable extends Migration
             $table->id();
             $table->String('nome');
             $table->String('descricao');
-            $table->double('preco');
-            $table->integer('estoque');
+            $table->float('preco');
             $table->String('imagem')->nullable();
 
             $table->unsignedBigInteger('id_user');
