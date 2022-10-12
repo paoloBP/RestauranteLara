@@ -27,7 +27,6 @@ class ProdutoRequest extends FormRequest
             'nome'=>'required',
             'descricao'=>'required',
             'preco'=>'required',
-            'estoque'=>'required',
             'imagem',
         ];
     }

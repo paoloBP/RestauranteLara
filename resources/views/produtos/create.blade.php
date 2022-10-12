@@ -28,10 +28,7 @@
         {!! Form::number('preco', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('estoque', 'Estoque:') !!}
-        {!! Form::number('estoque', null, ['class' => 'form-control', 'required']) !!}
-    </div>
+
 
     <div class="form-group">
         {!! Form::label('imagem', 'Imagem:') !!}

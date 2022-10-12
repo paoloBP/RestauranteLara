@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h1 align=center style="font-weight: bold">Novo Produto: {{$produto->nome}}</h1>
+    <h1 align=center style="font-weight: bold">Editando Produto: {{$produto->nome}}</h1>
 
     {!! Form::open(['route'=> ["produtos.update", 'id'=>$produto->id], 'method'=>'put']) !!}
 
@@ -20,10 +20,6 @@
         {!! Form::number('preco', $produto->preco, ['class' => 'form-control', 'required']) !!}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('estoque', 'Estoque:') !!}
-        {!! Form::number('estoque', $produto->estoque, ['class' => 'form-control', 'required']) !!}
-    </div>
 
     <div class="form-group">
         {!! Form::label('imagem', 'Imagem:') !!}
@@ -42,7 +38,7 @@
 
 
     <div class="form-group">
-        {!! Form::submit('Criar', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Editar', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
         <a href="{{ url('produtos') }}"class="btn btn-info">Cancelar</a>
     </div>

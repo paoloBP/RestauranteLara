@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-group" >
-        {!! Form::submit('Criar', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Editar', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
         <a href="{{ url('categorias') }}" class="btn btn-info">Cancelar</a>
     </div>
