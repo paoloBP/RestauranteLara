@@ -39,7 +39,7 @@ class ProdutoController extends Controller
         $novo_produto = $request->all();
         Produto::create($novo_produto);
 
-        return redirect('produtos');
+        return redirect()->route('produtos');
     }
 
     /**

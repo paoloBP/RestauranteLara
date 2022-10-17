@@ -27,8 +27,6 @@ Route::group(['prefix'=>'produtos', 'where'=>['id'=>'[0-9]+']], function() {
     Route::put('{id}/update', ['as'=>'produtos.update', 'uses'=>"\App\Http\Controllers\ProdutoController@update"]);
 });
 
-
-
 Route::group(['prefix'=>'users', 'where'=>['id'=>'[0-9]+']], function() {
     Route::get('', ['as'=>'users', 'uses'=>"\App\Http\Controllers\UserController@index"]);
     Route::get('create', ['as'=>'users.create', 'uses'=>"\App\Http\Controllers\UserController@create"]);
