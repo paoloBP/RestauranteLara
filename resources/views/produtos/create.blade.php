@@ -36,8 +36,10 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('id_categoria', 'Id Categoria:') !!}
-        {!! Form::text('id_categoria', null, ['class' => 'form-control']) !!}
+        {!! Form::label('categoria', 'Categoria:') !!}
+        {!! Form::select('id_categoria',
+                        \App\Models\Categoria::orderBy('nome')-> pluck('nome', 'id')->toArray(),
+                        null, ['class'=>'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">

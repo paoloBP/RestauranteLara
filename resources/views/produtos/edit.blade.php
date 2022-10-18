@@ -26,9 +26,12 @@
         {!! Form::text('imagem', $produto->imagem, ['class' => 'form-control']) !!}
     </div>
 
+   
     <div class="form-group">
-        {!! Form::label('id_categoria', 'Id Categoria:') !!}
-        {!! Form::text('id_categoria', $produto->id_categoria, ['class' => 'form-control']) !!}
+        {!! Form::label('categoria', 'Categoria:') !!}
+        {!! Form::select('id_categoria',
+                        \App\Models\Categoria::orderBy('nome')-> pluck('nome', 'id')->toArray(),
+                        $produto->id_categoria, ['class'=>'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">

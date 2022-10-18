@@ -15,7 +15,7 @@
         <th>Preço</th>
         <th>Imagem</th>
         <th>ID Usuario</th>
-        <th>ID Categoria</th>
+        <th>Categoria</th>
         <th>Ações</th>
 
         </thead>
@@ -28,7 +28,8 @@
                 <td>{{ $produto->preco }}</td>
                 <td><img src="{{$produto->imagem}}"width="61"></td>
                 <td>{{ $produto->id_user }}</td>
-                <td>{{ $produto->id_categoria}}</td>
+                <td>{{ isset($produto->categoria->nome)?$produto->categoria->nome: "Categoria não informada" }}</td>
+
 
                 <td>
                     <a href="{{ route('produtos.edit', ['id'=>$produto->id]) }}" class="btn btn-success">Editar</a>

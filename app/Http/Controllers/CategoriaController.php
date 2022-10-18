@@ -14,7 +14,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::all();
+        $categorias = Categoria::orderBy('nome')->paginate(5);
         return view('categorias.index', ['categorias'=>$categorias]);
     }
 
@@ -95,4 +95,5 @@ class CategoriaController extends Controller
     {
         $this->middleware('auth');
     }
+
 }

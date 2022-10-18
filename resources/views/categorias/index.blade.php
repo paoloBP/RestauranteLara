@@ -21,7 +21,7 @@
 
                 <td>
                     <a href="{{ route('categorias.edit', ['id'=>$categoria->id]) }}" class="btn btn-success">Editar</a>
-                    <a href="{{ route('categorias.destroy', ['id'=>$categoria->id]) }}" class="btn btn-danger">Excluir</a>
+                    <a href="#" onClick="return ConfirmaExclusao({{$categoria->id}})" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
 
@@ -29,6 +29,7 @@
         </tbody>
 
     </table>
+    {{$categorias->links("pagination::bootstrap-4") }}
 
 @stop
 
